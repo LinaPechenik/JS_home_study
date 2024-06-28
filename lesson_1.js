@@ -150,28 +150,28 @@ console.log('Papaya' === 'papaya'); // -
 /*====================== Значення які завжди будуть конвертовані 
 ======================== до false (Обовʼязково!!!) */
 
-// // 0 (число нуль)
+// // // 0 (число нуль)
 console.log(Boolean(0)); // false
-// // " " (порожній рядок)
+// // // " " (порожній рядок)
 console.log(Boolean(" "));
-// // NaN
+// // // NaN
 console.log(Boolean(NaN));
-// // undefined
+// // // undefined
 console.log(Boolean(undefined));
-// // null
+// // // null
 console.log(Boolean(null));
 // // false
 console.log(Boolean(false));
 
 
 
-console.log(!true); // метод інверсії, розвертає true у false
+console.log(!true); // метод інверсії, розвертає true у false... оператор інверсії - !
 console.log(!!1); // метод подвійної інверсії ???
 
 
 // унарний плюс
 console.log(+ '1'); // унарний плюс перетворює рядок у номер
-console.log(Nmber('18'));
+console.log(Number('18'));
 
 // бінарний плюс
 console.log(1 + 1); // 1(опаранд) +(оператор) 1(опаранд)
@@ -179,6 +179,95 @@ console.log(1 + 1); // 1(опаранд) +(оператор) 1(опаранд)
 
 console.log(+'1' === 1); //true
 console.log(Number('1') === 1); //true
+
+
+
+/**=========================== Методи роботи з числами ( тип даних Number ) =========================================*/
+
+ const str = "25.7a32px";
+ console.log(Number(str)); // Nan
+
+//---------------- Number.parseInt() ----------------- відокремити ціле число
+
+console.log(Number.parseInt(str)); // 25
+
+//---------------- Number.parseFloat() --------------- до тих пір поки може конвертувати до числа, враховуючи крапку
+
+console.log(Number.parseFloat(str)); // 25.7
+
+//---------------- Number.isNaN()  та  метод isNaN() ---------- сам собі ніколи не рівен
+
+console.log(NaN === NaN); // false
+console.log(Number.isNaN());
+
+//----------------------------- Клас Math
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+const value = 11.99;
+console.log(Math.floor(value)); // 11 - приводить до меншого цілого значення
+
+const value = 11.05;
+console.log(Math.ceil(value)); // 12 - приводить до більшого цілого значення
+
+console.log(Math.round(value)); // округлення за математичними правилами
+
+console.log(Math.pow(5, 4)); // для піднесення у ступінь // 5 y 4 ступені
+// console.log(Math.pow(5, 4)); = console.log(5 ** 4); аналогічно
+
+
+
+/**=============================== Функція ======================== */
+// hoisting https://codeguida.com/post/19
+
+//--------------- Function expression ---------------- приклад анонімної функції
+const add = function(val1 , val2) {
+    const
+    return val1 + val2
+}
+
+//--------------- Function declaration --------------- має власне ім'я
+function add(val1 , val2) {
+    return val1 + val2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
